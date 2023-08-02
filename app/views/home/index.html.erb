@@ -1,2 +1,28 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Users</h1>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th scope="row"><%= user.id %></th>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.phone %></td>
+          <td><%= user.address %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="paginate">
+  <%= paginate @users %>
+</div>
