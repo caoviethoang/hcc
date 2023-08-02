@@ -27,6 +27,7 @@ puts 'Generating seeds...'
 
 load_seed_file('users')
 load_seed_file('categories')
+load_seed_file('sub_categories')
 
 if Rails.env.development?
   AdminUser.create!(email: 'admin@example.com', password: 'password',

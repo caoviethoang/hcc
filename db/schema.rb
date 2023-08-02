@@ -60,8 +60,6 @@ ActiveRecord::Schema.define(version: 2023_08_02_074927) do
   create_table "sub_categories", force: :cascade do |t|
     t.integer "category_id", null: false
     t.string "name"
-    t.string "type", null: false
-    t.integer "product_id", null: false
     t.integer "quantity"
     t.integer "quantity_remaining", default: 0
     t.datetime "created_at", precision: 6, null: false
@@ -86,5 +84,4 @@ ActiveRecord::Schema.define(version: 2023_08_02_074927) do
   end
 
   add_foreign_key "products", "sub_categories"
-  add_foreign_key "sub_categories", "categories"
 end
