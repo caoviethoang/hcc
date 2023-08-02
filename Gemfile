@@ -5,9 +5,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.6'
 
+gem 'activeadmin'
+gem 'arctic_admin'
+gem 'bootstrap', '~> 5.3.0.alpha3'
+gem 'bootstrap-kaminari-views'
+gem 'factory_bot_rails'
+gem 'faker'
 gem 'jbuilder', '~> 2.7'
+gem 'jquery-rails'
+gem 'kaminari'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
+gem 'ransack'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -39,6 +48,7 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'

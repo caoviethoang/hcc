@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  def index; end
+  before_action :authenticate_user!
+
+  def index
+    @users = User.order(:name).page params[:page]
+  end
 end
